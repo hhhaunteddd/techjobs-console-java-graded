@@ -99,12 +99,15 @@ public class JobData {
         // TODO - implement this method
         ArrayList<HashMap<String, String>> jobSubset = new ArrayList<>();
 
+//        pulls out HashMap elements from the allJobs ArrayList
         for(HashMap<String, String> row : allJobs) {
+//            pulls out keys from HashMap
             for(String key : row.keySet()) {
-                String anItem = row.get(key).toLowerCase();
+//                pulls the HashMap value and uses .contain method to compare characters
+                String aItem = row.get(key).toLowerCase();
                 String searchItemLower = searchItem.toLowerCase();
 
-                if(anItem.contains(searchItemLower)) {
+                if(aItem.contains(searchItemLower)) {
                     jobSubset.add(row);
                 }
             }

@@ -120,13 +120,16 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
+//        prints No Results if search yields no results
         if (someJobs.size() == 0) {
-            System.out.printf("No Results");
+            System.out.println("No Results");
         } else {
 
+//            iterates through someJobs ArrayList
             for (int i = 0; i < someJobs.size(); i++) {
                 System.out.println("\n*****");
 
+//                pulls key, value pairs from HashMap using .entrySet method
                 for (Map.Entry<String, String> job: someJobs.get(i).entrySet()) {
                     System.out.printf(job.getKey() + ": " + job.getValue() + "\n");
                 }
