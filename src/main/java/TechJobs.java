@@ -122,7 +122,7 @@ public class TechJobs {
 
 //        prints No Results if search yields no results
         if (someJobs.size() == 0) {
-            System.out.println("No Results");
+            System.out.printf("No Results");
         } else {
 
 //            iterates through someJobs ArrayList
